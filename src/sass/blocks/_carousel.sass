@@ -1,11 +1,8 @@
 .carousel
   min-height: 720px
-  .container
-    display: flex
-    justify-content: center
-    align-items: center
-    padding: 15px
-    min-height: 720px
+  display: flex
+  justify-content: center
+  align-items: center
   .slider_container
     background: none
   .slider_dots
@@ -13,3 +10,10 @@
       background-color: #212121
       &.active
         background-color: $main-color
+  .slider_control-item
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: transparent
+    &.prev
+      transform: rotate(180deg)

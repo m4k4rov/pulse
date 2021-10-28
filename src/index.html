@@ -92,20 +92,54 @@
     </div>
   </section>
   <section class="carousel">
-    <div class="container">
-      <div class="slider_control-item prev"></div>
-      <div class="slider_box">        
-        <div class="slider_dots"></div>
-        <div class="slider_container">
-          <div class="slider_control"></div>
-          <div class="slider_content">
-            <img src="./img/slaid1.png" title="Вафельки" class="slider_container-item">
-            <img src="./img/slaid2.png" title="Дождь" class="slider_container-item">
-            <img src="./img/slaid3.png" title="Коньяк" class="slider_container-item">
-          </div>
+    <div class="slider_control-item prev">
+      <img src="./icons/right.png" alt="">
+    </div>
+    <div class="slider_box">        
+      <div class="slider_dots"></div>
+      <div class="slider_container">
+        <div class="slider_control"></div>
+        <div class="slider_content">
+          <img src="./img/slaid1.png" title="Вафельки" class="slider_container-item">
+          <img src="./img/slaid2.png" title="Дождь" class="slider_container-item">
+          <img src="./img/slaid3.png" title="Коньяк" class="slider_container-item">
         </div>
-      </div>  
-      <div class="slider_control-item next"></div>    
+      </div>
+    </div>  
+    <div class="slider_control-item next">
+      <img src="./icons/right.png" alt="">
+    </div>  
+  </section>
+
+  <section class="catalog">
+    <div class="container">
+      <h2 class="catalog__header">Каталог пульсометров</h2>
+      <ul class="catalog__tabs">
+        <li class="catalog__tab catalog__tab_active"> <div>Для фитнеса</div> </li>
+        <li class="catalog__tab"> <div>для бега</div> </li>
+        <li class="catalog__tab"> <div>для триатлона</div> </li>
+      </ul>
+
+      <div class="catalog__content">
+        <div class="catalog-item">
+          <img src="./img/pulsometr.png" alt="puls" class="catalog-item__img">
+          <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+          <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
+          <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+          <hr>
+
+          <div class="catalog-item__footer">
+            <div class="catalog-item__prices">
+              <div class="catalog-item__old-price">4 750 руб.</div>
+              <div class="catalog-item__price">4 500 руб.</div>
+            </div>
+            <button class="button button_mini">КУПИТЬ</button>
+          </div>
+          
+        </div>
+      </div>
+      <div class="catalog__content"></div>
+      <div class="catalog__content"></div>
     </div>
   </section>
   <script src="./slider/slider.js"></script>
