@@ -21,6 +21,10 @@
       flex-direction: column
       align-items: center
       width: 95%
+  .footer
+    padding-top: 200px
+    &__info
+      width: 100%
 @media ( max-width: 576px )
   .header
     gap: 10px
@@ -55,5 +59,9 @@
     &__tab
       width: 90%
       margin-top: 10px
-
-
+  .overlay
+    .modal
+      &__close
+        top: -40px
+        right: 50%
+        transform: translateX(50%)
