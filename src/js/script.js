@@ -118,5 +118,35 @@ $(document).ready(function(){
     // Mask
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
+    //send mail
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url:"mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+/*     const form = document.querySelectorAll("form");
+    form.forEach(item=>{
+        item.addEventListener('submit', function(ev) {
+            ev.preventDefault();
+            let formData = new FormData(item);
+            let request = new XMLHttpRequest();
+            request.open("POST", "mailer/smart.php");
+            request.onload = function () {
+                console.log('DONE', request.readyState); // readyState будет равно 4
+                item.reset();
+            };
+            request.send(formData); 
+        }, false);
+    }); */
 });
 
