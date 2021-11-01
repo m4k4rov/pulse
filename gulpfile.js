@@ -11,7 +11,7 @@ const image = require('gulp-image');
 gulp.task('browser-sync-server', function() {
     browserSync.init({
         server: {
-            baseDir: "dist"//Деректория в которой имеется наш index.html
+            baseDir: "docs"//Деректория в которой имеется наш index.html
         }
     });
     gulp.watch("src/*.html").on("change", browserSync.reload); //При изменении html файлов выполняется обновление страницы браузера
@@ -26,7 +26,7 @@ gulp.task('gulp-sass-watch', function() {
           }))
           .pipe(autoprefixer())  //Добавление автопреффиксов
           .pipe(cleanCSS({compatibility: 'ie8'}))
-          .pipe(gulp.dest("dist/css")) //Директория для сохранения получившегося файла css
+          .pipe(gulp.dest("docs/css")) //Директория для сохранения получившегося файла css
           .pipe(browserSync.stream());  //Обновление страницы сервера
 })
 
@@ -39,28 +39,28 @@ gulp.task('watch', function() {
 gulp.task('html', function() { //Сжатие html файла
   return gulp.src('src/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('docs/'));
 });
 
 gulp.task('scripts', function() { //Копирование js
   return gulp.src('src/js/**/*.js')
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('docs/js'))
         .on("end", browserSync.reload);
 });
 
 gulp.task('mailer', function() { //Копирование mailer
   return gulp.src('src/mailer/**/*')
-        .pipe(gulp.dest('dist/mailer'));
+        .pipe(gulp.dest('docs/mailer'));
 });
 gulp.task('icons', function() { //Копирование icons
   return gulp.src('src/icons/**/*')
-        .pipe(gulp.dest('dist/icons'));
+        .pipe(gulp.dest('docs/icons'));
 });
 
 gulp.task('image', function () { //сжатие и копирование img
   gulp.src('src/img/**/*')
     .pipe(image())
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('docs/img'));
 });
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync-server', 'gulp-sass-watch', 'scripts', 'mailer', 'icons', 'html', 'image')); //Действия gulp по умолчанию
