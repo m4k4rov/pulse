@@ -140,14 +140,16 @@
           background-color: $main-color
           left: -14px
           top: 8px
+        &:last-child
+          text-align: center
+          margin-top: 50px
+          margin-bottom: 0
+          transform: translateX(-19px)
+          &::before
+            background-color: transparent
     &__back
-      position: absolute
-      bottom: 0
-      left: 50%
-      transform: translateX(calc( -50% - 19px ))
       font-weight: 500
       font-size: 14px
-      text-align: center
       text-decoration-line: underline
       text-transform: uppercase
       color: $main-color

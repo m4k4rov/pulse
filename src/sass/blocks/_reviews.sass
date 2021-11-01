@@ -14,6 +14,12 @@
     justify-content: space-between
     align-items: flex-start
     margin-top: 40px
+    backface-visibility: hidden
+    perspective: 1000px
+    transform: rotateX(90deg)
+    opacity: 0
+    transition: transform 3s, opacity 2s
+    transition-delay: .2s
     &__img
       width: 169px
       margin-right: 20px
@@ -38,6 +44,9 @@
       span
         display: block
         margin-top: 13px
+    &.review-item_active
+      transform: rotateX(0deg)
+      opacity: 1
 
 
 
