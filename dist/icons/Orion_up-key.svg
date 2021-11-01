@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Up Key</title>
+  <desc>A flat styled icon from Orion Icon Library.</desc>
+  <path data-name="layer2"
+  d="M9.8 2h44.4A7.8 7.8 0 0 1 62 9.8v44.4a7.8 7.8 0 0 1-7.8 7.8H9.8A7.8 7.8 0 0 1 2 54.2V9.8A7.8 7.8 0 0 1 9.8 2z"
+  fill="#cc3a3a"></path>
+  <path data-name="opacity" d="M13.5 4h37a6.5 6.5 0 0 1 6.5 6.5v37a6.5 6.5 0 0 1-6.5 6.5h-37A6.5 6.5 0 0 1 7 47.5v-37A6.5 6.5 0 0 1 13.5 4z"
+  fill="#fff" opacity=".4"></path>
+  <path data-name="layer1" d="M40.7 25.291l-8-8-.7-.705-.707.706-8 8a1 1 0 0 0 1.414 1.408L31 20.414v23.571a1 1 0 0 0 2 0V20.414l6.289 6.286a1 1 0 1 0 1.411-1.409z"
+  fill="#fff"></path>
+</svg>
