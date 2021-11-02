@@ -7,6 +7,9 @@
     text-align: center
     text-transform: uppercase
     color: #0D0D0D
+  &__container
+    perspective: 1000px
+    transform-style: preserve-3d
   &-item
     width: 90%
     margin: 0 auto
@@ -15,8 +18,7 @@
     align-items: flex-start
     margin-top: 40px
     backface-visibility: hidden
-    perspective: 1000px
-    transform: rotateX(90deg)
+    transform: rotateX(-90deg)
     opacity: 0
     transition: transform 3s, opacity 2s
     transition-delay: .2s
