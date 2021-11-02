@@ -7,6 +7,10 @@
     text-align: center
     text-transform: uppercase
     color: #0D0D0D
+  &__container
+    transform-style: preserve-3d
+    perspective: 1000px
+    max-width: 100%
   &-item
     width: 90%
     margin: 0 auto
@@ -15,11 +19,11 @@
     align-items: flex-start
     margin-top: 40px
     backface-visibility: hidden
-    perspective: 1000px
-    transform: rotateX(90deg)
+    transform: rotateY(-90deg)
     opacity: 0
-    transition: transform 3s, opacity 2s
+    transition: transform 2s, opacity 1s
     transition-delay: .2s
+    background-color: #eeeeee
     &__img
       width: 169px
       margin-right: 20px
@@ -45,7 +49,7 @@
         display: block
         margin-top: 13px
     &.review-item_active
-      transform: rotateX(0deg)
+      transform: rotateY(0deg)
       opacity: 1
 
 
